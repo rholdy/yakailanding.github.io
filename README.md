@@ -13,64 +13,7 @@ A beautiful, modern landing page for Yakai - the all-in-one solution for brands 
 
 ## 🚀 Live Site
 
-Your site is now live at: **https://rholdy.github.io/yakailanding.github.io/**
-
-Once you configure your custom domain, it will be available at: **https://yakai.app**
-
-## 📋 Setup Instructions
-
-### 1. Configure Email Form (Formspree)
-
-To enable the email capture form:
-
-1. Go to [Formspree](https://formspree.io/) and create a free account
-2. Create a new form and get your form endpoint
-3. Open `index.html` and replace `YOUR_FORM_ID` on line 50 with your Formspree form ID:
-   ```html
-   <form id="waitlist-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-   ```
-
-### 2. Connect Your GoDaddy Domain
-
-#### On GitHub:
-
-1. Go to your repository: https://github.com/rholdy/yakailanding.github.io
-2. Click **Settings** → **Pages**
-3. Under "Custom domain", enter: `yakai.app`
-4. Click **Save**
-5. Wait for DNS check to complete (the CNAME file has already been created)
-
-#### On GoDaddy:
-
-1. Log into your GoDaddy account
-2. Go to **My Products** → **Domains**
-3. Click on **yakai.app** → **Manage DNS**
-4. Add/update the following DNS records:
-
-   **For root domain (yakai.app):**
-   - Type: `A`
-   - Name: `@`
-   - Value: `185.199.108.153`
-   - TTL: `600` (or default)
-
-   Add three more A records with the same settings but different values:
-   - `185.199.109.153`
-   - `185.199.110.153`
-   - `185.199.111.153`
-
-   **For www subdomain:**
-   - Type: `CNAME`
-   - Name: `www`
-   - Value: `rholdy.github.io`
-   - TTL: `600` (or default)
-
-5. Save all records
-6. Wait 10-30 minutes for DNS propagation
-
-#### Enable HTTPS (Recommended):
-
-1. Once DNS is verified on GitHub, check **Enforce HTTPS** in Settings → Pages
-2. Wait for the SSL certificate to be issued (can take a few minutes)
+**https://yakai.app**
 
 ## 🛠️ Customization Guide
 
@@ -141,43 +84,13 @@ git push
 
 GitHub Pages will automatically rebuild your site within a few minutes.
 
-## 🎯 Next Steps
+## 💡 Development
 
-1. **Configure Formspree** for email collection
-2. **Set up GoDaddy DNS** to connect your domain
-3. **Add yak mascot images** to the `images/` folder
-4. **Customize content** in `index.html`
-5. **Update social links** in the footer
-6. **Test on mobile devices** to ensure responsive design works perfectly
-7. **Add Google Analytics** (optional) for tracking visitors
+**Test locally**: Open `index.html` directly in your browser
 
-## 💡 Tips
-
-- **Test locally**: Open `index.html` directly in your browser
-- **Mobile testing**: Use browser dev tools or actual devices
-- **Performance**: Images should be optimized (use WebP format when possible)
-- **SEO**: Update meta tags in `<head>` section
-
-## 🐛 Troubleshooting
-
-**Domain not working?**
-- Check DNS records are correct
-- Wait up to 48 hours for full DNS propagation
-- Verify CNAME file contains only your domain
-
-**Form not submitting?**
-- Ensure Formspree form ID is correctly added
-- Check browser console for errors
-- Verify Formspree account is active
-
-**Animations not working?**
-- Clear browser cache
-- Check JavaScript console for errors
-- Ensure `script.js` is loading correctly
-
-## 📧 Support
-
-Questions? Reach out at careers@yakai.app
+**Performance tips**:
+- Optimize images (use WebP format when possible)
+- Update meta tags in `<head>` section for SEO
 
 ---
 
